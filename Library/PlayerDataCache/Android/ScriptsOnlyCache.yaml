@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - ARFeatheredPlaneMeshVisualizer
     - ARTap
     - DragAndDrop_
+    - NonARController
     - PlaneDetectionController
     - UIManager
     - UiSceneManager
@@ -41,6 +42,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Scenes/ARview.unity:
     - Class: 1
@@ -66,6 +68,8 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 84
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -104,6 +108,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12878}
     - Class: 114
+      Script: {instanceID: 12988}
+    - Class: 114
       Script: {instanceID: 13170}
     - Class: 114
       Script: {instanceID: 13444}
@@ -121,6 +127,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14156}
     - Class: 114
       Script: {instanceID: 14192}
+    - Class: 114
+      Script: {instanceID: 34200}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -136,6 +144,10 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 328
+      Script: {instanceID: 0}
+    - Class: 329
       Script: {instanceID: 0}
     Assets/Scenes/puzzle.unity:
     - Class: 1
@@ -876,12 +888,6 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 8bb94334b7d4106d46f37e115e230fc2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ARTapToPlace
-  - hash:
-      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -982,6 +988,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: ea8a87f91b76c9b1abfeec56b5461d09
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NonARController
   platform: 13
   scenePathNames:
   - Assets/Scenes/start.unity

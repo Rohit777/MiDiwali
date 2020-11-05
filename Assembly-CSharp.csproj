@@ -64,12 +64,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ARFeatheredPlaneMeshVisualizer.cs" />
     <Compile Include="Assets\Scripts\ARTap.cs" />
-    <Compile Include="Assets\Scripts\ARTapToPlace.cs" />
     <Compile Include="Assets\Scripts\Core\Singleton\Singleton.cs" />
     <Compile Include="Assets\Scripts\Core\Utilities\ImageUtils.cs" />
     <Compile Include="Assets\Scripts\Enums.cs" />
     <Compile Include="Assets\Scripts\Extensions\Vector2Extensions.cs" />
     <Compile Include="Assets\Scripts\HandController.cs" />
+    <Compile Include="Assets\Scripts\Manager\NonARController.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
     <Compile Include="Assets\Scripts\Manager\UiSceneManager.cs" />
     <Compile Include="Assets\Scripts\PlaneDetectionController.cs" />
@@ -705,6 +705,14 @@
     <ProjectReference Include="NativeGallery.Runtime.csproj">
       <Project>{5547F18E-0994-AF75-C18E-E6E3B8609C67}</Project>
       <Name>NativeGallery.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="NativeShare.Editor.csproj">
+      <Project>{91A8A73B-5D82-5B59-4C1D-3049DE568769}</Project>
+      <Name>NativeShare.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NativeShare.Runtime.csproj">
+      <Project>{397AFA68-4A4A-D748-23B1-229417C8B8B9}</Project>
+      <Name>NativeShare.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
