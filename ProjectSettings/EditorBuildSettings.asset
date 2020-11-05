@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/start.unity
+    guid: 3562af698a81b8c449d679ad65209981
+  - enabled: 1
+    path: Assets/Scenes/puzzle.unity
+    guid: 0fdf4c864aa41c64e8dbb2b3598aa8c7
+  - enabled: 1
+    path: Assets/Scenes/ARview.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  m_configObjects: {}
