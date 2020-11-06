@@ -58,6 +58,7 @@ public class ARTap : MonoBehaviour
 
     private bool winning = false;
     public Text wordCloudText;
+    public Text wordCloudInstruction;
     public GameObject wordcloud;
 
     [SerializeField]
@@ -67,6 +68,8 @@ public class ARTap : MonoBehaviour
         get { return m_PlaneManager; }
         set { m_PlaneManager = value; }
     }
+    [SerializeField]
+    private GameObject tick;
 
     public GameObject ARview;
     public GameObject NonARview;
@@ -83,6 +86,14 @@ public class ARTap : MonoBehaviour
     private void OnEnable()
     {
         Count = 0;
+        timeRemaining = 300;
+        if (spawnedObject != null)
+        {
+            tick.SetActive(false);
+            objectPlaced = false;
+            planeDetectionController.SetAllPlanesActive(true);
+            Destroy(spawnedObject);
+        }
     }
 
     private void Update()
@@ -116,6 +127,11 @@ public class ARTap : MonoBehaviour
         if (Count < prefabs.Length)
         {
             wordCloudText.text = prefabs[Count].mssg;
+        }
+
+        if(Count > 0)
+        {
+            wordCloudInstruction.text = "Tap To Continue";
         }
 
         if (timerIsRunning)

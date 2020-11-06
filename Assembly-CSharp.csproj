@@ -694,6 +694,10 @@
       <Project>{22F2DA26-86D4-E813-C838-A94F1F6EB999}</Project>
       <Name>NativeCamera.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="NativeShare.Editor.csproj">
+      <Project>{91A8A73B-5D82-5B59-4C1D-3049DE568769}</Project>
+      <Name>NativeShare.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="NativeGallery.Editor.csproj">
       <Project>{364ADFE2-C475-4E57-F371-BC850637204F}</Project>
       <Name>NativeGallery.Editor</Name>
@@ -702,17 +706,13 @@
       <Project>{1F7CF455-5748-CFE3-C5DA-A1B0A35A3DD3}</Project>
       <Name>NativeCamera.Runtime</Name>
     </ProjectReference>
-    <ProjectReference Include="NativeGallery.Runtime.csproj">
-      <Project>{5547F18E-0994-AF75-C18E-E6E3B8609C67}</Project>
-      <Name>NativeGallery.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="NativeShare.Editor.csproj">
-      <Project>{91A8A73B-5D82-5B59-4C1D-3049DE568769}</Project>
-      <Name>NativeShare.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="NativeShare.Runtime.csproj">
       <Project>{397AFA68-4A4A-D748-23B1-229417C8B8B9}</Project>
       <Name>NativeShare.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="NativeGallery.Runtime.csproj">
+      <Project>{5547F18E-0994-AF75-C18E-E6E3B8609C67}</Project>
+      <Name>NativeGallery.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

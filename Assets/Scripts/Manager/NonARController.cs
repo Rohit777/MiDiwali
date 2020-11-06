@@ -54,6 +54,8 @@ public class NonARController : Singleton<UIManager>
                 selectedClip = myclip[7];
                 break;
         }
+
+        vid.clip = selectedClip;
     }
 
 
