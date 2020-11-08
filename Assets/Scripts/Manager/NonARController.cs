@@ -58,5 +58,9 @@ public class NonARController : Singleton<UIManager>
         vid.clip = selectedClip;
     }
 
+    public void ClearOutRenderTexture(RenderTexture renderTexture)
+    {
+        renderTexture.Release();
+    }
 
 }

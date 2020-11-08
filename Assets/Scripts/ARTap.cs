@@ -31,6 +31,7 @@ public class ARTap : MonoBehaviour
 
     [SerializeField]
     Animator m_MoveDeviceAnimation;
+    public GameObject MoveDevice;
     public Animator moveDeviceAnimation
     {
         get { return m_MoveDeviceAnimation; }
@@ -39,6 +40,7 @@ public class ARTap : MonoBehaviour
 
     [SerializeField]
     Animator m_TapToPlaceAnimation;
+    public GameObject TapDevice;
     public Animator tapToPlaceAnimation
     {
         get { return m_TapToPlaceAnimation; }
@@ -179,6 +181,11 @@ public class ARTap : MonoBehaviour
                     m_ShowingTapToPlace = true;
                     m_ShowingMoveDevice = false;
                 }
+            }
+            else
+            {
+                MoveDevice.SetActive(false);
+                TapDevice.SetActive(false);
             }
         }
         else

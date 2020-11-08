@@ -19,7 +19,10 @@ public class ImageUtils : Singleton<ImageUtils>
 
         // Save the screenshot to Gallery/Photos
         NativeGallery.Permission permission = NativeGallery.SaveImageToGallery(screenshotTexture, defaultGallery, defaultScreenshotFileName, (success, path) => Debug.Log("Media save result: " + success + " " + path));
-        mtexture[ARTap.Count].texture = screenshotTexture;
+        if (ARTap.Count < mtexture.Length)
+        {
+            mtexture[ARTap.Count].texture = screenshotTexture;
+        }
         ignoredCanvas.enabled = true;
         tick.SetActive(true);
     }

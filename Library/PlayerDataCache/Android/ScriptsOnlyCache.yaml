@@ -810,7 +810,7 @@ ScriptsOnlyBuild:
     className: AROcclusionManager
   - hash:
       serializedVersion: 2
-      Hash: 338e7b0865cdc96bc1a85d0b2305d699
+      Hash: 4acda0cdc4fb6ea64c2b817ade9d12c3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ARTap
