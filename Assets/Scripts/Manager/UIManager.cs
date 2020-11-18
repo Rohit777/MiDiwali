@@ -19,6 +19,9 @@ public class UIManager : Singleton<UIManager>
     [SerializeField]
     private GameObject tick;
 
+    [SerializeField]
+    private GameObject cross;
+
     private CaptureType lastCapturedType;
 
     private Texture2D[] lastCapturedImages;
@@ -32,6 +35,6 @@ public class UIManager : Singleton<UIManager>
     }
 
     public void TakeScreenshot() => StartCoroutine(ImageUtils.Instance
-        .CaptureScreenForImage(canvas, defaultGallery, defaultScreenshotFileName, tick, imagePreviewTexture));
+        .CaptureScreenForImage(canvas, defaultGallery, defaultScreenshotFileName, tick, cross, imagePreviewTexture));
 
 }

@@ -7,7 +7,7 @@ using System.IO;
 
 public class ImageUtils : Singleton<ImageUtils>
 {
-    public IEnumerator CaptureScreenForImage(Canvas ignoredCanvas, string defaultGallery, string defaultScreenshotFileName, GameObject tick, RawImage[] mtexture)
+    public IEnumerator CaptureScreenForImage(Canvas ignoredCanvas, string defaultGallery, string defaultScreenshotFileName, GameObject tick, GameObject cross, RawImage[] mtexture)
     {
         ignoredCanvas.enabled = false;
 
@@ -25,6 +25,8 @@ public class ImageUtils : Singleton<ImageUtils>
         }
         ignoredCanvas.enabled = true;
         tick.SetActive(true);
+        cross.SetActive(true);
+
     }
 
     public IEnumerator ShareCollageScreenForImage(GameObject ignoredCanvas, string defaultScreenshotFileName)

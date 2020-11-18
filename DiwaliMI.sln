@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{5101DEFC-54D3-F3B6-81F2-A6538DDCC6CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeanTouch", "LeanTouch.csproj", "{B675B5C9-457D-758D-10BF-17FC8D7542E6}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeGallery.Runtime", "NativeGallery.Runtime.csproj", "{5547F18E-0994-AF75-C18E-E6E3B8609C67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeanCommon", "LeanCommon.csproj", "{130F724C-AD5F-8CD1-5B60-DF515C38AE7E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeCamera.Runtime", "NativeCamera.Runtime.csproj", "{1F7CF455-5748-CFE3-C5DA-A1B0A35A3DD3}"
 EndProject
@@ -25,10 +29,18 @@ Global
 		{5101DEFC-54D3-F3B6-81F2-A6538DDCC6CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5101DEFC-54D3-F3B6-81F2-A6538DDCC6CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5101DEFC-54D3-F3B6-81F2-A6538DDCC6CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B675B5C9-457D-758D-10BF-17FC8D7542E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B675B5C9-457D-758D-10BF-17FC8D7542E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B675B5C9-457D-758D-10BF-17FC8D7542E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B675B5C9-457D-758D-10BF-17FC8D7542E6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5547F18E-0994-AF75-C18E-E6E3B8609C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5547F18E-0994-AF75-C18E-E6E3B8609C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5547F18E-0994-AF75-C18E-E6E3B8609C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5547F18E-0994-AF75-C18E-E6E3B8609C67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{130F724C-AD5F-8CD1-5B60-DF515C38AE7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{130F724C-AD5F-8CD1-5B60-DF515C38AE7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{130F724C-AD5F-8CD1-5B60-DF515C38AE7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{130F724C-AD5F-8CD1-5B60-DF515C38AE7E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1F7CF455-5748-CFE3-C5DA-A1B0A35A3DD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1F7CF455-5748-CFE3-C5DA-A1B0A35A3DD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F7CF455-5748-CFE3-C5DA-A1B0A35A3DD3}.Release|Any CPU.ActiveCfg = Release|Any CPU

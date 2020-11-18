@@ -9,7 +9,7 @@ public class DragAndDrop_ : MonoBehaviour
 {
     public GameObject SelectedPiece;
     public int PlacedPieces = 0;
-    private float timeRemaining = 30;
+    private float timeRemaining = 15;
     public bool timerIsRunning = false;
     public Text timeText;
     public bool winning = false;
@@ -30,6 +30,7 @@ public class DragAndDrop_ : MonoBehaviour
                 if (!hit.transform.GetComponent<piceseScript>().InRightPosition)
                 {
                     SelectedPiece = hit.transform.gameObject;
+                    FindObjectOfType<AudioManager>().Play("puzzlePiece");
                     SelectedPiece.GetComponent<piceseScript>().Selected = true;
                 }
             }
@@ -64,6 +65,8 @@ public class DragAndDrop_ : MonoBehaviour
                 if (winning == true)
                 {
                     timerIsRunning = false;
+                    FindObjectOfType<AudioManager>().stop("timer");
+                    FindObjectOfType<AudioManager>().Play("win");
                     Debug.Log("you won");
                     popup.SetActive(false);
                     puzzlePice.SetActive(false);
@@ -74,6 +77,8 @@ public class DragAndDrop_ : MonoBehaviour
             {
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
+                FindObjectOfType<AudioManager>().stop("timer");
+                FindObjectOfType<AudioManager>().Play("loose");
                 timerIsRunning = false;
                 popup.SetActive(false);
                 puzzlePice.SetActive(false);
@@ -84,7 +89,7 @@ public class DragAndDrop_ : MonoBehaviour
 
     public void retry()
     {
-        timeRemaining = 30;
+        timeRemaining = 15;
         PlacedPieces = 0;
         puzzlePice.SetActive(true);
         PopupText.SetActive(true);
@@ -105,6 +110,8 @@ public class DragAndDrop_ : MonoBehaviour
     public void startGame()
     {
         timerIsRunning = true;
+        FindObjectOfType<AudioManager>().Play("timer");
+
     }
 
     public void arview()

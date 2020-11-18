@@ -69,12 +69,15 @@
     <Compile Include="Assets\Scripts\Enums.cs" />
     <Compile Include="Assets\Scripts\Extensions\Vector2Extensions.cs" />
     <Compile Include="Assets\Scripts\HandController.cs" />
+    <Compile Include="Assets\Scripts\Manager\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Manager\NonARController.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
     <Compile Include="Assets\Scripts\Manager\UiSceneManager.cs" />
     <Compile Include="Assets\Scripts\PlaneDetectionController.cs" />
+    <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\puzzle\DragAndDrop_.cs" />
     <Compile Include="Assets\Scripts\puzzle\piceseScript.cs" />
+    <None Include="Assets\Lean\READ ME.txt" />
     <None Include="Assets\Shader\FeatheredPlaneShader.shader" />
     <Reference Include="Unity.XR.Management">
       <HintPath>E:/DiwaliMI/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
@@ -141,6 +144,9 @@
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>E:/DiwaliMI/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mobile.AndroidLogcat.Editor">
+      <HintPath>E:/DiwaliMI/Library/ScriptAssemblies/Unity.Mobile.AndroidLogcat.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
       <HintPath>E:/DiwaliMI/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
@@ -706,6 +712,10 @@
       <Project>{1F7CF455-5748-CFE3-C5DA-A1B0A35A3DD3}</Project>
       <Name>NativeCamera.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="LeanCommon.csproj">
+      <Project>{130F724C-AD5F-8CD1-5B60-DF515C38AE7E}</Project>
+      <Name>LeanCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="NativeShare.Runtime.csproj">
       <Project>{397AFA68-4A4A-D748-23B1-229417C8B8B9}</Project>
       <Name>NativeShare.Runtime</Name>
@@ -713,6 +723,10 @@
     <ProjectReference Include="NativeGallery.Runtime.csproj">
       <Project>{5547F18E-0994-AF75-C18E-E6E3B8609C67}</Project>
       <Name>NativeGallery.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanTouch.csproj">
+      <Project>{B675B5C9-457D-758D-10BF-17FC8D7542E6}</Project>
+      <Name>LeanTouch</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

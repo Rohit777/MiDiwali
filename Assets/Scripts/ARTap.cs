@@ -19,6 +19,7 @@ public class ARTap : MonoBehaviour
     public prefabNAme[] prefabs;
 
     public GameObject spawnedObject { get; private set; }
+    public GameObject objectToPlace;
 
     private bool objectPlaced = false;
 
@@ -72,6 +73,8 @@ public class ARTap : MonoBehaviour
     }
     [SerializeField]
     private GameObject tick;
+    [SerializeField]
+    private GameObject crosss;
 
     public GameObject ARview;
     public GameObject NonARview;
@@ -92,6 +95,7 @@ public class ARTap : MonoBehaviour
         if (spawnedObject != null)
         {
             tick.SetActive(false);
+            crosss.SetActive(false);
             objectPlaced = false;
             planeDetectionController.SetAllPlanesActive(true);
             Destroy(spawnedObject);
@@ -114,11 +118,10 @@ public class ARTap : MonoBehaviour
                     if (!objectPlaced && !isOverUI)
                     {
                         Pose hitPose = s_Hits[0].pose;
-
-                        spawnedObject = Instantiate(prefabs[Count].prefab, hitPose.position, hitPose.rotation);
-
+                        objectToPlace.transform.SetPositionAndRotation(hitPose.position, hitPose.rotation);
+                        spawnedObject = Instantiate(prefabs[Count].prefab, objectToPlace.transform.position, objectToPlace.transform.rotation);
+                        spawnedObject.transform.parent = objectToPlace.transform;
                         objectPlaced = true;
-
                         planeDetectionController.SetAllPlanesActive(false);
                     }
                 }
@@ -146,6 +149,7 @@ public class ARTap : MonoBehaviour
                 {
                     Debug.Log("you won");
                     NonARview.SetActive(true);
+                    FindObjectOfType<AudioManager>().Play("win");
                     win.SetActive(true);
                     ARview.SetActive(false);
                 }
@@ -155,6 +159,7 @@ public class ARTap : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                FindObjectOfType<AudioManager>().Play("loose");
                 NonARview.SetActive(true);
                 lose.SetActive(true);
                 ARview.SetActive(false);
@@ -233,7 +238,15 @@ public class ARTap : MonoBehaviour
 
         objectPlaced = false;
         planeDetectionController.SetAllPlanesActive(true);
-        Destroy(spawnedObject);
+        Destroy(objectToPlace.transform.GetChild(0).gameObject);
+        wordcloud.SetActive(true);
+    }
+
+    public void cross()
+    {
+        objectPlaced = false;
+        planeDetectionController.SetAllPlanesActive(true);
+        Destroy(objectToPlace.transform.GetChild(0).gameObject);
         wordcloud.SetActive(true);
     }
 
