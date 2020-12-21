@@ -9,7 +9,7 @@ public class DragAndDrop_ : MonoBehaviour
 {
     public GameObject SelectedPiece;
     public int PlacedPieces = 0;
-    private float timeRemaining = 15;
+    private float timeRemaining = 30;
     public bool timerIsRunning = false;
     public Text timeText;
     public bool winning = false;
@@ -18,6 +18,7 @@ public class DragAndDrop_ : MonoBehaviour
     public GameObject puzzlePice;
     public GameObject popup;
     public GameObject PopupText;
+    public GameObject timerUi;
 
 
     void Update()
@@ -89,12 +90,12 @@ public class DragAndDrop_ : MonoBehaviour
 
     public void retry()
     {
-        timeRemaining = 15;
+        timeRemaining = 30;
         PlacedPieces = 0;
-        puzzlePice.SetActive(true);
         PopupText.SetActive(true);
         Loose.SetActive(false);
         Win.SetActive(false);
+        timerUi.SetActive(false);
     }
 
     void DisplayTime(float timeToDisplay)
@@ -111,7 +112,6 @@ public class DragAndDrop_ : MonoBehaviour
     {
         timerIsRunning = true;
         FindObjectOfType<AudioManager>().Play("timer");
-
     }
 
     public void arview()

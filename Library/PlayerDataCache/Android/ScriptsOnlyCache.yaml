@@ -17,6 +17,12 @@ ScriptsOnlyBuild:
     - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     Unity.XR.ARFoundation.dll:
     - UnityEngine.XR.ARFoundation.ARCameraBackground
     - UnityEngine.XR.ARFoundation.ARCameraManager
@@ -90,61 +96,65 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11186}
-    - Class: 114
-      Script: {instanceID: 11204}
+      Script: {instanceID: 11208}
     - Class: 114
       Script: {instanceID: 11226}
     - Class: 114
-      Script: {instanceID: 11488}
+      Script: {instanceID: 11248}
     - Class: 114
-      Script: {instanceID: 11542}
+      Script: {instanceID: 11510}
     - Class: 114
-      Script: {instanceID: 11604}
+      Script: {instanceID: 11564}
     - Class: 114
-      Script: {instanceID: 11710}
+      Script: {instanceID: 11626}
     - Class: 114
-      Script: {instanceID: 11800}
+      Script: {instanceID: 11732}
     - Class: 114
-      Script: {instanceID: 11994}
+      Script: {instanceID: 11822}
     - Class: 114
-      Script: {instanceID: 12134}
+      Script: {instanceID: 12016}
     - Class: 114
-      Script: {instanceID: 12212}
+      Script: {instanceID: 12156}
     - Class: 114
-      Script: {instanceID: 12514}
+      Script: {instanceID: 12234}
     - Class: 114
-      Script: {instanceID: 12750}
+      Script: {instanceID: 12536}
     - Class: 114
-      Script: {instanceID: 12798}
+      Script: {instanceID: 12772}
     - Class: 114
-      Script: {instanceID: 12950}
+      Script: {instanceID: 12820}
     - Class: 114
-      Script: {instanceID: 12976}
+      Script: {instanceID: 12972}
     - Class: 114
-      Script: {instanceID: 13034}
+      Script: {instanceID: 12998}
     - Class: 114
-      Script: {instanceID: 13092}
+      Script: {instanceID: 13056}
     - Class: 114
-      Script: {instanceID: 13280}
+      Script: {instanceID: 13114}
     - Class: 114
-      Script: {instanceID: 13574}
+      Script: {instanceID: 13302}
     - Class: 114
-      Script: {instanceID: 13592}
+      Script: {instanceID: 13320}
     - Class: 114
-      Script: {instanceID: 13738}
+      Script: {instanceID: 13596}
     - Class: 114
-      Script: {instanceID: 13782}
+      Script: {instanceID: 13614}
     - Class: 114
-      Script: {instanceID: 13854}
+      Script: {instanceID: 13666}
     - Class: 114
-      Script: {instanceID: 14022}
+      Script: {instanceID: 13760}
     - Class: 114
-      Script: {instanceID: 14206}
+      Script: {instanceID: 13804}
     - Class: 114
-      Script: {instanceID: 14330}
+      Script: {instanceID: 13876}
     - Class: 114
-      Script: {instanceID: 14366}
+      Script: {instanceID: 14044}
+    - Class: 114
+      Script: {instanceID: 14228}
+    - Class: 114
+      Script: {instanceID: 14352}
+    - Class: 114
+      Script: {instanceID: 14388}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -189,25 +199,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11204}
+      Script: {instanceID: 11226}
     - Class: 114
-      Script: {instanceID: 11488}
+      Script: {instanceID: 11510}
     - Class: 114
-      Script: {instanceID: 11542}
+      Script: {instanceID: 11564}
     - Class: 114
-      Script: {instanceID: 11994}
+      Script: {instanceID: 12016}
     - Class: 114
-      Script: {instanceID: 12212}
+      Script: {instanceID: 12234}
     - Class: 114
-      Script: {instanceID: 12558}
+      Script: {instanceID: 12580}
     - Class: 114
-      Script: {instanceID: 12950}
+      Script: {instanceID: 12972}
     - Class: 114
-      Script: {instanceID: 13738}
+      Script: {instanceID: 13320}
     - Class: 114
-      Script: {instanceID: 13912}
+      Script: {instanceID: 13666}
     - Class: 114
-      Script: {instanceID: 14366}
+      Script: {instanceID: 13760}
+    - Class: 114
+      Script: {instanceID: 13934}
+    - Class: 114
+      Script: {instanceID: 14388}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -237,7 +251,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -245,23 +265,37 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
+    - Class: 109
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11204}
+      Script: {instanceID: 11226}
     - Class: 114
-      Script: {instanceID: 11542}
+      Script: {instanceID: 11510}
     - Class: 114
-      Script: {instanceID: 11836}
+      Script: {instanceID: 11564}
     - Class: 114
-      Script: {instanceID: 11994}
+      Script: {instanceID: 11858}
     - Class: 114
-      Script: {instanceID: 12212}
+      Script: {instanceID: 12016}
     - Class: 114
-      Script: {instanceID: 12950}
+      Script: {instanceID: 12234}
     - Class: 114
-      Script: {instanceID: 13738}
+      Script: {instanceID: 12296}
     - Class: 114
-      Script: {instanceID: 14366}
+      Script: {instanceID: 12972}
+    - Class: 114
+      Script: {instanceID: 13320}
+    - Class: 114
+      Script: {instanceID: 13336}
+    - Class: 114
+      Script: {instanceID: 13760}
+    - Class: 114
+      Script: {instanceID: 14028}
+    - Class: 114
+      Script: {instanceID: 14388}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -680,7 +714,7 @@ ScriptsOnlyBuild:
     className: TMP_Asset
   - hash:
       serializedVersion: 2
-      Hash: 029f2afd059022153d9ff9d58cebf00c
+      Hash: c2fbbe03c6b0ff2dbb300300859ca0bb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DragAndDrop_
@@ -974,7 +1008,7 @@ ScriptsOnlyBuild:
     className: LeanSelectableSpriteRendererColor
   - hash:
       serializedVersion: 2
-      Hash: 38d275f9b891fe4661d77d598e949c5f
+      Hash: 89088f9d9ad2de2b798deb2093764c3b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ARTap

@@ -29,29 +29,23 @@ public class NonARController : Singleton<UIManager>
     {
         switch (button.name)
         {
-            case "Mi_TvBtn":
+            case "Mi_CameraBtn":
                 selectedClip = myclip[0];
                 break;
-            case "Mi_CameraBtn":
+            case "Mi_WaterPurifierBtn":
                 selectedClip = myclip[1];
                 break;
-            case "Mi_SpeakerBtn":
+            case "MI_AirPurifierBtn":
                 selectedClip = myclip[2];
                 break;
-            case "Mi_WaterPurifierBtn":
+            case "Mi_BulbBtn":
                 selectedClip = myclip[3];
                 break;
-            case "MI_AirPurifierBtn":
+            case "Mi_LampBtn":
                 selectedClip = myclip[4];
                 break;
-            case "Mi_BulbBtn":
-                selectedClip = myclip[5];
-                break;
-            case "Mi_LampBtn":
-                selectedClip = myclip[6];
-                break;
             case "Mi_SmartLampBtn":
-                selectedClip = myclip[7];
+                selectedClip = myclip[5];
                 break;
         }
 

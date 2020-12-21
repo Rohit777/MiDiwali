@@ -24,6 +24,8 @@ public class ARTap : MonoBehaviour
     private bool objectPlaced = false;
 
     ARRaycastManager m_RaycastManager;
+    private Pose placementPose;
+    public GameObject placementIndicator;
 
 
     private PlaneDetectionController planeDetectionController;
@@ -55,7 +57,7 @@ public class ARTap : MonoBehaviour
     private bool placementPoseIsValid = false;
 
 
-    private float timeRemaining = 300;
+    private float timeRemaining = 600;
     public bool timerIsRunning = false;
     public Text timeText;
 
@@ -91,7 +93,7 @@ public class ARTap : MonoBehaviour
     private void OnEnable()
     {
         Count = 0;
-        timeRemaining = 300;
+        timeRemaining = 600;
         if (spawnedObject != null)
         {
             tick.SetActive(false);
@@ -105,6 +107,8 @@ public class ARTap : MonoBehaviour
     private void Update()
     {
         Debug.Log(objectPlaced);
+        UpdatePlacementPose();
+        UpdatePlacemntIndicator();
         animationUpdate();
         if (Input.touchCount > 0)
         {
@@ -117,8 +121,6 @@ public class ARTap : MonoBehaviour
                     bool isOverUI = touchPosition.IsPointOverUIObject();
                     if (!objectPlaced && !isOverUI)
                     {
-                        Pose hitPose = s_Hits[0].pose;
-                        objectToPlace.transform.SetPositionAndRotation(hitPose.position, hitPose.rotation);
                         spawnedObject = Instantiate(prefabs[Count].prefab, objectToPlace.transform.position, objectToPlace.transform.rotation);
                         spawnedObject.transform.parent = objectToPlace.transform;
                         objectPlaced = true;
@@ -145,7 +147,7 @@ public class ARTap : MonoBehaviour
             {
                 timeRemaining -= Time.deltaTime;
                 DisplayTime(timeRemaining);
-                if (Count == 9)
+                if (Count == 8)
                 {
                     Debug.Log("you won");
                     NonARview.SetActive(true);
@@ -210,6 +212,28 @@ public class ARTap : MonoBehaviour
         }
     }
 
+    private void UpdatePlacemntIndicator()
+    {
+        if (placementPoseIsValid)
+        {
+            if (!objectPlaced)
+            {
+                placementIndicator.SetActive(true);
+                placementIndicator.transform.SetPositionAndRotation(placementPose.position, placementPose.rotation);
+                objectToPlace.transform.SetPositionAndRotation(placementPose.position, placementPose.rotation);
+
+            }
+            else
+            {
+                placementIndicator.SetActive(false);
+            }
+        }
+        else
+        {
+            placementIndicator.SetActive(false);
+        }
+    }
+
     bool PlanesFound()
     {
         if (planeManager == null)
@@ -248,6 +272,22 @@ public class ARTap : MonoBehaviour
         planeDetectionController.SetAllPlanesActive(true);
         Destroy(objectToPlace.transform.GetChild(0).gameObject);
         wordcloud.SetActive(true);
+    }
+
+    private void UpdatePlacementPose()
+    {
+        var screenCentre = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
+        m_RaycastManager.Raycast(screenCentre, s_Hits, TrackableType.Planes);
+
+        placementPoseIsValid = s_Hits.Count > 0;
+        if (placementPoseIsValid)
+        {
+            placementPose = s_Hits[0].pose;
+
+            var cameraForward = Camera.current.transform.forward;
+            var cameraBearing = new Vector3(cameraForward.x, 0, cameraForward.z).normalized;
+            placementPose.rotation = Quaternion.LookRotation(cameraBearing);
+        }
     }
 
     static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
