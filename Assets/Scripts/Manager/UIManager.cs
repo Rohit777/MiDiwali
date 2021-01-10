@@ -35,6 +35,8 @@ public class UIManager : Singleton<UIManager>
     }
 
     public void TakeScreenshot() => StartCoroutine(ImageUtils.Instance
-        .CaptureScreenForImage(canvas, defaultGallery, defaultScreenshotFileName, tick, cross, imagePreviewTexture));
+        .CaptureScreenForImage(canvas, tick, cross, imagePreviewTexture));
+
+    public void SaveScreenshot() => ImageUtils.Instance.saveImage(defaultGallery, defaultScreenshotFileName);
 
 }

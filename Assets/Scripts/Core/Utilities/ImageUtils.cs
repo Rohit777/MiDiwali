@@ -7,25 +7,31 @@ using System.IO;
 
 public class ImageUtils : Singleton<ImageUtils>
 {
-    public IEnumerator CaptureScreenForImage(Canvas ignoredCanvas, string defaultGallery, string defaultScreenshotFileName, GameObject tick, GameObject cross, RawImage[] mtexture)
+    public Texture2D ScreenshotTexture;
+    public IEnumerator CaptureScreenForImage(Canvas ignoredCanvas, GameObject tick, GameObject cross, RawImage[] mtexture)
     {
         ignoredCanvas.enabled = false;
 
         yield return new WaitForEndOfFrame();
 
-        Texture2D screenshotTexture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
-        screenshotTexture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
-        screenshotTexture.Apply();
+        ScreenshotTexture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+        ScreenshotTexture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+        ScreenshotTexture.Apply();
 
         // Save the screenshot to Gallery/Photos
-        NativeGallery.Permission permission = NativeGallery.SaveImageToGallery(screenshotTexture, defaultGallery, defaultScreenshotFileName, (success, path) => Debug.Log("Media save result: " + success + " " + path));
         if (ARTap.Count < mtexture.Length)
         {
-            mtexture[ARTap.Count].texture = screenshotTexture;
+            mtexture[ARTap.Count].texture = ScreenshotTexture;
         }
         ignoredCanvas.enabled = true;
         tick.SetActive(true);
         cross.SetActive(true);
+
+    }
+
+    public void saveImage(string defaultGallery, string defaultScreenshotFileName)
+    {
+        NativeGallery.Permission permission = NativeGallery.SaveImageToGallery(ScreenshotTexture, defaultGallery, defaultScreenshotFileName, (success, path) => Debug.Log("Media save result: " + success + " " + path));
 
     }
 

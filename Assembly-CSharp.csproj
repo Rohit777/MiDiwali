@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
     <Compile Include="Assets\Scripts\Manager\UiSceneManager.cs" />
     <Compile Include="Assets\Scripts\PlaneDetectionController.cs" />
+    <Compile Include="Assets\Scripts\Rotator.cs" />
     <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\puzzle\DragAndDrop_.cs" />
     <Compile Include="Assets\Scripts\puzzle\piceseScript.cs" />
