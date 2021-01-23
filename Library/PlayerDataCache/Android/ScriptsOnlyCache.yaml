@@ -149,15 +149,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13876}
     - Class: 114
-      Script: {instanceID: 14044}
+      Script: {instanceID: 13972}
     - Class: 114
-      Script: {instanceID: 14228}
+      Script: {instanceID: 14046}
     - Class: 114
-      Script: {instanceID: 14352}
+      Script: {instanceID: 14230}
     - Class: 114
-      Script: {instanceID: 14388}
+      Script: {instanceID: 14354}
     - Class: 114
-      Script: {instanceID: 21138}
+      Script: {instanceID: 14390}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -224,7 +224,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13934}
     - Class: 114
-      Script: {instanceID: 14388}
+      Script: {instanceID: 14390}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -293,9 +293,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13760}
     - Class: 114
-      Script: {instanceID: 14028}
+      Script: {instanceID: 14030}
     - Class: 114
-      Script: {instanceID: 14388}
+      Script: {instanceID: 14390}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -765,7 +765,7 @@ ScriptsOnlyBuild:
     className: ARKitReferenceObjectEntry
   - hash:
       serializedVersion: 2
-      Hash: 237b4255fa4446dd92b34ba2c6dd88df
+      Hash: aa8072e1a01dd7aa3b7773db459c4f64
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NonARController
@@ -1047,6 +1047,12 @@ ScriptsOnlyBuild:
     className: piceseScript
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Rotator
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1237,12 +1243,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Rotator
   platform: 13
   scenePathNames:
   - Assets/Scenes/start.unity

@@ -10,6 +10,7 @@ public class NonARController : Singleton<UIManager>
 {
     [SerializeField]
     private GameObject Button;
+    public GameObject backButton;
     public GameObject CollageBtn;
     [SerializeField]
     private string defaultScreenshotFileName = "Screenshot.png";
@@ -26,7 +27,7 @@ public class NonARController : Singleton<UIManager>
     public VideoClip[] myclip;
     private VideoClip selectedClip;
 
-    public void ShareCollage() => StartCoroutine(ImageUtils.Instance.ShareCollageScreenForImage(Button, defaultScreenshotFileName));
+    public void ShareCollage() => StartCoroutine(ImageUtils.Instance.ShareCollageScreenForImage(Button, backButton, defaultScreenshotFileName));
 
     private void Update()
     {

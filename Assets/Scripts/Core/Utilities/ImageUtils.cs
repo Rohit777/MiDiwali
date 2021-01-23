@@ -35,9 +35,10 @@ public class ImageUtils : Singleton<ImageUtils>
 
     }
 
-    public IEnumerator ShareCollageScreenForImage(GameObject ignoredCanvas, string defaultScreenshotFileName)
+    public IEnumerator ShareCollageScreenForImage(GameObject ignoredCanvas, GameObject ignoreitem, string defaultScreenshotFileName)
     { 
         ignoredCanvas.SetActive(false);
+        ignoreitem.SetActive(false);
 
         yield return new WaitForEndOfFrame();
 
@@ -45,6 +46,7 @@ public class ImageUtils : Singleton<ImageUtils>
         screenshotTexture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
         screenshotTexture.Apply();
 
+        NativeGallery.Permission permission = NativeGallery.SaveImageToGallery(screenshotTexture, "Screenshots", defaultScreenshotFileName, (success, path) => Debug.Log("Media save result: " + success + " " + path));
         string filePath = Path.Combine(Application.temporaryCachePath, defaultScreenshotFileName);
         File.WriteAllBytes(filePath, screenshotTexture.EncodeToPNG());
         new NativeShare().AddFile(filePath).Share();
