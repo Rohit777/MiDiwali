@@ -48,11 +48,13 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.AspectRatioFitter
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
@@ -113,7 +115,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11822}
     - Class: 114
+      Script: {instanceID: 11868}
+    - Class: 114
       Script: {instanceID: 12016}
+    - Class: 114
+      Script: {instanceID: 12074}
     - Class: 114
       Script: {instanceID: 12156}
     - Class: 114

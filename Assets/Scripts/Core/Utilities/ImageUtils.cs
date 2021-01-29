@@ -26,13 +26,11 @@ public class ImageUtils : Singleton<ImageUtils>
         ignoredCanvas.enabled = true;
         tick.SetActive(true);
         cross.SetActive(true);
-
     }
 
     public void saveImage(string defaultGallery, string defaultScreenshotFileName)
     {
         NativeGallery.Permission permission = NativeGallery.SaveImageToGallery(ScreenshotTexture, defaultGallery, defaultScreenshotFileName, (success, path) => Debug.Log("Media save result: " + success + " " + path));
-
     }
 
     public IEnumerator ShareCollageScreenForImage(GameObject ignoredCanvas, GameObject ignoreitem, string defaultScreenshotFileName)
